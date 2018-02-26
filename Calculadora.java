@@ -14,6 +14,7 @@ public class Calculadora
     private int num1;
     private int num2;
     private int rdo;
+    private int i;
     private Operacion op;
 
     /**
@@ -56,9 +57,10 @@ public class Calculadora
                 rdo=num1/num2;
                 break;
             case POTENCIAS:
-                for (int i = 1; i <= num2; i++) {
+                for (i = 1; i <= num2; i++) {
                     rdo = rdo * num1;
                 }
+                break;
         }
     }
     public void ponOperacion(String opera){
