@@ -7,14 +7,12 @@
  */
 
 
-
 public class Calculadora
 {
     // instance variables - replace the example below with your own
     private int num1;
     private int num2;
     private int rdo;
-    private int i;
     private Operacion op;
 
     /**
@@ -56,13 +54,20 @@ public class Calculadora
             case DIVIDE:
                 rdo=num1/num2;
                 break;
-            case POTENCIAS:
-                for (i = 1; i <= num2; i++) {
-                    rdo = rdo * num1;
+            case POTENCIA:
+            if(num2 >1){    
+            for (int i= 1; i < num2; i++) {
+                if(i == 1){
+                    rdo = num1 * num1;
                 }
-                break;
+                else
+                    rdo=rdo*num1;
         }
     }
+    else
+        rdo=num1;
+    }
+}
     public void ponOperacion(String opera){
         switch(opera){
         
@@ -78,8 +83,8 @@ public class Calculadora
         case "DIVIDE":
             op=op.DIVIDE;
             break;
-        case "POTENCIAS":
-            op=op.POTENCIAS;
+        case "POTENCIA":
+            op=op.POTENCIA;
             break;
         }
     }
@@ -95,6 +100,6 @@ public class Calculadora
         System.out.println("Resta :"+ Integer.toString(num1-num2));
         System.out.println("Multiplica :" + Integer.toString(num1*num2));
         System.out.println("Divide :"+ Integer.toString(num1/num2));
-        System.out.println("Potencia :"+ Integer.toString(num1*num2*(num2)));
+        System.out.println("Potencia :"+rdo+"");
     }
 }
