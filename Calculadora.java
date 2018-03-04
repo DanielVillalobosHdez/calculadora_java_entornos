@@ -12,7 +12,7 @@ public class Calculadora
     // instance variables - replace the example below with your own
     private int num1;
     private int num2;
-    private int rdo;
+    private double rdo;
     private Operacion op;
 
     /**
@@ -66,7 +66,11 @@ public class Calculadora
     }
     else
         rdo=num1;
-    }
+        break;
+            case RAIZ:
+                rdo = Math.sqrt(num1);                        
+    
+}
 }
     public void ponOperacion(String opera){
         switch(opera){
@@ -86,9 +90,12 @@ public class Calculadora
         case "POTENCIA":
             op=op.POTENCIA;
             break;
+        case "RAIZ":
+            op=op.RAIZ;
+            break;
         }
     }
-    public int dameResultado()
+    public double dameResultado()
     {
         // put your code here
         return rdo;
@@ -101,5 +108,7 @@ public class Calculadora
         System.out.println("Multiplica :" + Integer.toString(num1*num2));
         System.out.println("Divide :"+ Integer.toString(num1/num2));
         System.out.println("Potencia :"+rdo+"");
+        System.out.println("Raiz :"+rdo+"");
+        
     }
 }

@@ -13,6 +13,10 @@ import org.junit.Test;
  */
 public class CalculadoraTest
 {
+    private Operacion[] operacio1;
+    private Operacion sUMA1;
+    private Operacion pOTENCIA1;
+
     /**
      * Default constructor for test class CalculadoraTest
      */
@@ -28,6 +32,9 @@ public class CalculadoraTest
     @Before
     public void setUp()
     {
+        operacio1 = Operacion.values();
+        sUMA1 = operacio1[0];
+        pOTENCIA1 = operacio1[4];
     }
 
     /**
