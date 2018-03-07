@@ -14,6 +14,13 @@ public class Calculadora
     private int num2;
     private double rdo;
     private Operacion op;
+    
+    public static void main(String[] args) {
+    	Calculadora calc = new Calculadora();
+    	calc.ponNum1(5);
+    	calc.ponNum2(10);
+    	calc.muestraTodosResultados();
+    }
 
     /**
      * Constructor for objects of class Calculadora
