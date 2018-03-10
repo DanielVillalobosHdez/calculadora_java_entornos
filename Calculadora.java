@@ -13,6 +13,8 @@ public class Calculadora
     private double num1;
     private double num2;
     private double rdo;
+    private double pot;
+    private double raiz;
     private Operacion op;
     
     public static void main(String[] args) {
@@ -65,17 +67,17 @@ public class Calculadora
             if(num2 >1){    
             for (int i= 1; i < num2; i++) {
                 if(i == 1){
-                    rdo = num1 * num1;
+                    pot = num1 * num1;
                 }
                 else
-                    rdo=rdo*num1;
+                    pot=rdo*num1;
         }
     }
     else
-        rdo=num1;
+        pot=num1;
         break;
             case RAIZ:
-                rdo = Math.sqrt(num1);                        
+                raiz = Math.sqrt(num1);                        
     
 }
 }
@@ -114,8 +116,8 @@ public class Calculadora
         System.out.println("Resta :"+(num1-num2)+"");
         System.out.println("Multiplica :" +(num1*num2)+"");
         System.out.println("Divide :"+(num1/num2)+"");
-        System.out.println("Potencia :"+rdo+"");
-        System.out.println("Raiz :"+rdo+"");
+        System.out.println("Potencia :"+Math.pow((double)num1,(double)num2)+"");
+        System.out.println("Raiz :"+Math.sqrt(num1)+"");
         
     }
 }
