@@ -10,8 +10,8 @@
 public class Calculadora
 {
     // instance variables - replace the example below with your own
-    private int num1;
-    private int num2;
+    private double num1;
+    private double num2;
     private double rdo;
     private Operacion op;
     
@@ -109,11 +109,11 @@ public class Calculadora
     }
     
     public void muestraTodosResultados(){
-        System.out.println("Num1="+Integer.toString(num1)+" Num2=" + Integer.toString(num2));
-        System.out.println("Suma :" + Integer.toString(num1+num2));
-        System.out.println("Resta :"+ Integer.toString(num1-num2));
-        System.out.println("Multiplica :" + Integer.toString(num1*num2));
-        System.out.println("Divide :"+ Integer.toString(num1/num2));
+        System.out.println("Num1="+num1+" Num2=" +num2+"");
+        System.out.println("Suma :" +(num1+num2)+"");
+        System.out.println("Resta :"+(num1-num2)+"");
+        System.out.println("Multiplica :" +(num1*num2)+"");
+        System.out.println("Divide :"+(num1/num2)+"");
         System.out.println("Potencia :"+rdo+"");
         System.out.println("Raiz :"+rdo+"");
         
