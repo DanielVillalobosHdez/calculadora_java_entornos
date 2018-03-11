@@ -126,7 +126,7 @@ public class Calculadora
         System.out.println("Multiplica :" +(num1*num2)+"");
         System.out.println("Divide :"+(num1/num2)+"");
         System.out.println("Potencia :"+Math.pow((double)num1,(double)num2)+"");
-        System.out.println("Raiz :"+Math.sqrt(num1)+"");
+        System.out.println("Raiz :"+Math.pow((double)num1,1/(double)num2)+"");
         System.out.println("logaritmo :"+Math.log(num1)+"");
         System.out.println("factorial :"+fact+"");
         
