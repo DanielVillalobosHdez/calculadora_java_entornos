@@ -13,15 +13,15 @@ public class Calculadora
     private double num1;
     private double num2;
     private double rdo;
-    private double pot;
-    private double raiz;
+    private double fact = 1;
     private Operacion op;
+    private int num;
     
     public static void main(String[] args) {
-    	Calculadora calc = new Calculadora();
-    	calc.ponNum1(5);
-    	calc.ponNum2(10);
-    	calc.muestraTodosResultados();
+        Calculadora calc = new Calculadora();
+        calc.ponNum1(5);
+        calc.ponNum2(10);
+        calc.muestraTodosResultados();
     }
 
     /**
@@ -67,18 +67,24 @@ public class Calculadora
             if(num2 >1){    
             for (int i= 1; i < num2; i++) {
                 if(i == 1){
-                    pot = num1 * num1;
+                    rdo = num1 * num1;
                 }
                 else
-                    pot=rdo*num1;
+                    rdo=rdo*num1;
         }
     }
     else
-        pot=num1;
+        rdo=num1;
         break;
             case RAIZ:
-                raiz = Math.sqrt(num1);                        
-    
+                rdo = Math.sqrt(num1);
+            break;
+            case FACTORIAL:
+                num = 5;
+                for (int i = num; i > 0; i--) {
+            fact = fact * i;
+        }
+             break;    
 }
 }
     public void ponOperacion(String opera){
@@ -102,6 +108,9 @@ public class Calculadora
         case "RAIZ":
             op=op.RAIZ;
             break;
+        case "FACTORIAL":
+            op=op.RAIZ;
+            break;
         }
     }
     public double dameResultado()
@@ -118,6 +127,8 @@ public class Calculadora
         System.out.println("Divide :"+(num1/num2)+"");
         System.out.println("Potencia :"+Math.pow((double)num1,(double)num2)+"");
         System.out.println("Raiz :"+Math.sqrt(num1)+"");
+        System.out.println("logaritmo :"+Math.log(num1)+"");
+        System.out.println("factorial :"+fact+"");
         
     }
 }
