@@ -78,6 +78,9 @@ public class Calculadora
                 break;
             case DIVIDE:
                 rdo=num1/num2;
+                if(rdo <= -100.000 || rdo >= 100.000){
+                    System.out.println("Error");
+                }
                 break;
             case POTENCIA:
             if(num2 >1){    
@@ -91,15 +94,24 @@ public class Calculadora
     }
     else
         rdo=num1;
+            if(rdo <= -100.000 || rdo >= 100.000){
+                    System.out.println("Error");
+                }
         break;
             case RAIZ:
                 rdo = Math.sqrt(num1);
+               if(rdo <= -100.000 || rdo >= 100.000){
+                    System.out.println("Error");
+                }
             break;
             case FACTORIAL:
                 fact = 1;
                 for (int i = num; i > 0; i--) {
             fact = fact * i;
         }
+        if(rdo <= -100.000 || rdo >= 100.000){
+                    System.out.println("Error");
+                }
              break;    
 }
 }
