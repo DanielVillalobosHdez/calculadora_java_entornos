@@ -13,7 +13,7 @@ public class Calculadora
     private double num1;
     private double num2;
     private double rdo;
-    private double fact = 1;
+    private double fact;
     private Operacion op;
     private int num;
     
@@ -21,6 +21,7 @@ public class Calculadora
         Calculadora calc = new Calculadora();
         calc.ponNum1(5);
         calc.ponNum2(10);
+        calc.ponNum(5);
         calc.muestraTodosResultados();
     }
 
@@ -47,18 +48,33 @@ public class Calculadora
         // put your code here
         this.num2=n2;
     }
+    
+    public void ponNum(int n)
+    {
+        // put your code here
+        this.num=n;
+    }
 
     public void opera()
     {
         switch(op){
             case SUMA:
                 rdo=num1+num2;
+                if(rdo <= -100.000 || rdo >= 100.000){
+                    System.out.println("Error");
+                }
                 break;
             case RESTA:
                 rdo=num1-num2;
+                if(rdo <= -100.000 || rdo >= 100.000){
+                    System.out.println("Error");
+                }
                 break;
             case MULTIPLICA:
                 rdo=num1*num2;
+                if(rdo <= -100.000 || rdo >= 100.000){
+                    System.out.println("Error");
+                }
                 break;
             case DIVIDE:
                 rdo=num1/num2;
@@ -80,7 +96,7 @@ public class Calculadora
                 rdo = Math.sqrt(num1);
             break;
             case FACTORIAL:
-                num = 5;
+                fact = 1;
                 for (int i = num; i > 0; i--) {
             fact = fact * i;
         }
